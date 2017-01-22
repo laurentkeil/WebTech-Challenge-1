@@ -1,0 +1,48 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT p:lightSensorData (p:dailyMesurement+,p:model,p:user-ID)>
+<!ATTLIST p:lightSensorData
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'
+    xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation CDATA #REQUIRED>
+
+<!ELEMENT p:dailyMesurement (p:date,p:measurement)>
+<!ATTLIST p:dailyMesurement
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:model EMPTY>
+<!ATTLIST p:model
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'
+    name CDATA #REQUIRED>
+
+<!ELEMENT p:user-ID (#PCDATA)>
+<!ATTLIST p:user-ID
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:date (p:year,p:month,p:day)>
+<!ATTLIST p:date
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:measurement (p:time-stump,p:brightness)>
+<!ATTLIST p:measurement
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:year (#PCDATA)>
+<!ATTLIST p:year
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:month (#PCDATA)>
+<!ATTLIST p:month
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:day (#PCDATA)>
+<!ATTLIST p:day
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:time-stump (#PCDATA)>
+<!ATTLIST p:time-stump
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT p:brightness (#PCDATA)>
+<!ATTLIST p:brightness
+    xmlns:p CDATA #FIXED 'http://www.example.org/light-sensor'>

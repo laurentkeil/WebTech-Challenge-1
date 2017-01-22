@@ -1,0 +1,35 @@
+package main;
+
+import org.jdom2.Document;
+
+import xmltools.Stylizer;
+import xmltools.XMLReader;
+
+public class FunctionalityTwo {
+	
+	static boolean valid;
+	
+	public static String main(String[] args) {
+		
+		//Transform xml
+		Stylizer.XSLTTransform("integration.xsl", "x.xml", "integration.xml");
+		
+		Document doc = XMLReader.readXSDValidation("integration.xsd", "integration.xml");
+		
+		
+		if(doc==null) {
+			valid = false;
+			return null;
+		}
+		else 
+		{
+			valid = true;
+			return XMLReader.convertDocumentToString("integration.xml");
+		}
+	}
+	
+	public boolean getValidation() {
+		return valid;
+	}
+	
+}

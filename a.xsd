@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://www.example.org/air-conditioner"
+	xmlns:a="http://www.example.org/air-conditioner">
+	<xs:element name="air-measurements">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="a:dailyMeasurement" />
+				<xs:element ref="a:model" />
+				<xs:element ref="a:user-ID" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dailyMeasurement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="a:date" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="a:measurement" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="date" type="xs:date" />
+	<xs:element name="measurement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="a:temperature" />
+				<xs:element ref="a:time-stamp" />
+				<xs:element ref="a:action" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="temperature">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="a:value" />
+				<xs:element ref="a:unit" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="value" type="xs:double" />
+	<xs:element name="unit" type="xs:string" />
+	<xs:element name="time-stamp" type="xs:time" />
+	<xs:element name="action">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="heater" />
+			<xs:enumeration value="cooler" />
+			<xs:enumeration value="normal" />
+		</xs:restriction>
+	</xs:simpleType>
+	</xs:element>
+	<xs:element name="model" type="xs:string" />
+	<xs:element name="user-ID" type="xs:string" />
+</xs:schema>

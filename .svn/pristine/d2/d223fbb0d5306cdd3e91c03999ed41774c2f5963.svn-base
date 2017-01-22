@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:schemaLocation="http://www.example.org/actuator actuator.xsd " xmlns:i="http://www.example.org/actuator" xmlns:l="http://www.example.org/light-sensor" xmlns:u="http://www.example.org/user" xmlns:a="http://www.example.org/air-conditioner" xmlns:b="http://www.example.org/bulb" xmlns:t="http://www.example.org/thermostat" version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	
+<xsl:output
+		indent="yes"
+	/>
+	<xsl:variable name="thermo_var" select="document('thermostat.xml')/t:thermostatData" />
+	<xsl:variable name="bulb_var" select="document('bulb.xml')/b:bulbData" />
+	<xsl:variable name="light_var" select="document('light-sensor.xml')/l:lightSensorData" />
+	<xsl:variable name="air_var" select="document('air-conditioner.xml')/a:air-conditioner-data" />
+	<xsl:variable name="user_var" select="document('user.xml')/u:userData" />
+	
+	<xsl:template match="/">
+		<xsl:element name="i:actuator">
+			<xsl:element name="u:users">
+				<xsl:apply-templates select="$user_var"/>
+			</xsl:element>
+			<xsl:element name="a:air-measurements">
+				<xsl:apply-templates select="$air_var"/>
+			</xsl:element>
+			<xsl:element name="b:bulb-measurements">
+				<xsl:apply-templates select="$bulb_var"/>
+			</xsl:element>
+			<xsl:element name="l:light-measurements">
+				<xsl:apply-templates select="$light_var"/>
+			</xsl:element>
+			<xsl:element name="t:thermostat-measurements">
+				<xsl:apply-templates select="$thermo_var"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	
+	<xsl:template match="u:userData">
+		<xsl:for-each select="//u:user">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template match="a:air-conditioner-data">
+		<xsl:for-each select="//a:dailyMeasurement">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
+		<xsl:copy-of select="//a:model"/>
+		<xsl:copy-of select="//a:user-ID"/>
+	</xsl:template>
+	
+	<xsl:template match="b:bulbData">
+		<xsl:for-each select="//b:dailyMeasurement">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
+		<xsl:element name="b:model">
+			<xsl:value-of select="//b:model/@name"/>
+		</xsl:element>
+		<xsl:copy-of select="b:user-ID"/>
+	</xsl:template>
+	
+	<xsl:template match="l:lightSensorData">
+		<xsl:for-each select="//l:dailyMeasurement">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
+		<xsl:element name="l:model">
+			<xsl:value-of select="//l:model/@name"/>
+		</xsl:element>
+		<xsl:copy-of select="l:user-ID"/>
+	</xsl:template>
+	
+	<xsl:template match="t:thermostatData">
+		<xsl:for-each select="//t:dailyMeasurement">
+			<xsl:copy>
+				<xsl:copy-of select="t:date"/>
+				<xsl:for-each select=".//t:measurement">
+					<xsl:copy>
+						<xsl:element name="t:temperature">
+							<xsl:element name="t:value">
+								<xsl:value-of select="t:temperature/t:value/t:integer-part"/>.<xsl:value-of select="t:temperature/t:value/t:fraction-part"/>
+							</xsl:element>
+							<xsl:copy-of select=".//t:unit"/>
+						</xsl:element>
+						<xsl:copy-of select="t:time-stamp"/>
+						<xsl:copy-of select="t:humidity"/>
+					</xsl:copy>
+				</xsl:for-each>
+			</xsl:copy>
+		</xsl:for-each>
+		<xsl:element name="t:model">
+			<xsl:value-of select="//t:model/@name"/>
+		</xsl:element>
+		<xsl:copy-of select="t:user-ID"/>
+	</xsl:template>
+	
+	
+</xsl:stylesheet>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://www.example.org/bulb"
+	xmlns:b="http://www.example.org/bulb">
+	<xs:element name="bulb-measurements">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="b:dailyMeasurement" />
+				<xs:element ref="b:model" />
+				<xs:element ref="b:user-ID" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dailyMeasurement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="b:date" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="b:measurement" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="date" type="xs:date" />
+	<xs:element name="measurement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="b:color-mode" />
+				<xs:element ref="b:time-stamp" />
+				<xs:element ref="b:brightness" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="color-mode">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="normal" />
+				<xs:enumeration value="romance" />
+				<xs:enumeration value="relaxation" />
+				<xs:enumeration value="no-light" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="time-stamp" type="xs:time" />
+	<xs:element name="brightness">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="dark" />
+				<xs:enumeration value="dim" />
+				<xs:enumeration value="bright" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="model" type="xs:string" />
+	<xs:element name="user-ID" type="xs:string" />
+</xs:schema>

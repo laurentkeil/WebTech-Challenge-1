@@ -1,0 +1,19 @@
+declare namespace p = "http://www.example.org/thermostat";
+
+for $x in distinct-values(doc("thermostat_original.xml")//p:thermostatData/p:dailyMesurement/p:data)
+order by $x
+return <p:thermostatData>{
+for $y in doc("thermostat_original.xml")//p:thermostatData/p:dailyMesurement
+where $y/date = $x
+return (<p:dailyMesurement>,
+<p:date>{data($y/date)}</p:date>,
+<p:measurement>,
+<p:temprature>,
+<p:value>{data($y/measurement/temprature/value)}</p:value>,
+<p:unit>{data($y/measurement/temprature/unit)}</p:unit>,
+</p:temprature>,
+<p:time-stump>{data($y/time-stump)}</p:time-stump>,
+<p:humidity>{data($y/humidity)}</p:humidity>
+</p:measurement>,
+</p:dailyMesurement>)
+}</p:thermostatData>

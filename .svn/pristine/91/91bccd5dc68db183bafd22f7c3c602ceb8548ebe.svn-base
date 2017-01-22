@@ -1,0 +1,18 @@
+package main;
+
+import xmltools.Stylizer;
+import xmltools.XMLReader;
+
+public class FunctionalityTwo {
+	
+	public static String main(String[] args) {
+		
+		//Transform xml
+		
+		//XSD validation
+		// If OK --> ConvertDocumentToString
+		// If NOK --> Rien
+		return null;
+	}
+	
+}

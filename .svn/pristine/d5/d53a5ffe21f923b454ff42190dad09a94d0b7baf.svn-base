@@ -1,0 +1,23 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT p:userData (p:user)+>
+<!ATTLIST p:userData
+    xmlns:p CDATA #FIXED 'http://www.example.org/user'
+    xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation CDATA #REQUIRED>
+
+<!ELEMENT p:user (p:ID,p:firstName,p:LastName)>
+<!ATTLIST p:user
+    xmlns:p CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT p:ID (#PCDATA)>
+<!ATTLIST p:ID
+    xmlns:p CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT p:firstName (#PCDATA)>
+<!ATTLIST p:firstName
+    xmlns:p CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT p:LastName (#PCDATA)>
+<!ATTLIST p:LastName
+    xmlns:p CDATA #FIXED 'http://www.example.org/user'>

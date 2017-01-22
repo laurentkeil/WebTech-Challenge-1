@@ -1,0 +1,194 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT i:actuator (u:users,a:air-measurements,b:bulb-measurements,
+                      l:light-measurements,t:thermostat-measurements)>
+<!ATTLIST i:actuator
+    xmlns:i CDATA #FIXED 'http://www.example.org/actuator'>
+
+<!ELEMENT u:users (u:user)+>
+<!ATTLIST u:users
+    xmlns:u CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT a:air-measurements (a:dailyMeasurement+,a:model,a:user-ID)>
+<!ATTLIST a:air-measurements
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT b:bulb-measurements (b:dailyMeasurement+,b:model,b:user-ID)>
+<!ATTLIST b:bulb-measurements
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT l:light-measurements (l:dailyMeasurement+,l:model,l:user-ID)>
+<!ATTLIST l:light-measurements
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT t:thermostat-measurements (t:dailyMeasurement+,t:model,t:user-ID)>
+<!ATTLIST t:thermostat-measurements
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT u:user (u:ID,u:firstName,u:LastName)>
+<!ATTLIST u:user
+    xmlns:u CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT a:dailyMeasurement (a:date,a:measurement)>
+<!ATTLIST a:dailyMeasurement
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:model (#PCDATA)>
+<!ATTLIST a:model
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:user-ID (#PCDATA)>
+<!ATTLIST a:user-ID
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT b:dailyMeasurement (b:date,b:measurement)>
+<!ATTLIST b:dailyMeasurement
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT b:model (#PCDATA)>
+<!ATTLIST b:model
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT b:user-ID (#PCDATA)>
+<!ATTLIST b:user-ID
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT l:dailyMeasurement (l:date,l:measurement)>
+<!ATTLIST l:dailyMeasurement
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:model (#PCDATA)>
+<!ATTLIST l:model
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:user-ID (#PCDATA)>
+<!ATTLIST l:user-ID
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT t:dailyMeasurement (t:date,t:measurement)>
+<!ATTLIST t:dailyMeasurement
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT t:model (#PCDATA)>
+<!ATTLIST t:model
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT t:user-ID (#PCDATA)>
+<!ATTLIST t:user-ID
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT u:ID (#PCDATA)>
+<!ATTLIST u:ID
+    xmlns:u CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT u:firstName (#PCDATA)>
+<!ATTLIST u:firstName
+    xmlns:u CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT u:LastName (#PCDATA)>
+<!ATTLIST u:LastName
+    xmlns:u CDATA #FIXED 'http://www.example.org/user'>
+
+<!ELEMENT a:date (#PCDATA)>
+<!ATTLIST a:date
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:measurement (a:temperature,a:time-stamp,a:action)>
+<!ATTLIST a:measurement
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT b:date (#PCDATA)>
+<!ATTLIST b:date
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT b:measurement (b:color-mode,b:time-stamp,b:brightness)>
+<!ATTLIST b:measurement
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT l:date (l:year,l:month,l:day)>
+<!ATTLIST l:date
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:measurement (l:time-stamp,l:brightness)>
+<!ATTLIST l:measurement
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT t:date (#PCDATA)>
+<!ATTLIST t:date
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT t:measurement (t:temperature,t:time-stamp,t:humidity)>
+<!ATTLIST t:measurement
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT a:temperature (a:value,a:unit)>
+<!ATTLIST a:temperature
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:time-stamp (#PCDATA)>
+<!ATTLIST a:time-stamp
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:action (#PCDATA)>
+<!ATTLIST a:action
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT b:color-mode (#PCDATA)>
+<!ATTLIST b:color-mode
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT b:time-stamp (#PCDATA)>
+<!ATTLIST b:time-stamp
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT b:brightness (#PCDATA)>
+<!ATTLIST b:brightness
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'>
+
+<!ELEMENT l:year (#PCDATA)>
+<!ATTLIST l:year
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:month (#PCDATA)>
+<!ATTLIST l:month
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:day (#PCDATA)>
+<!ATTLIST l:day
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:time-stamp (#PCDATA)>
+<!ATTLIST l:time-stamp
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT l:brightness (#PCDATA)>
+<!ATTLIST l:brightness
+    xmlns:l CDATA #FIXED 'http://www.example.org/light-sensor'>
+
+<!ELEMENT t:temperature (t:value,t:unit)>
+<!ATTLIST t:temperature
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT t:time-stamp (#PCDATA)>
+<!ATTLIST t:time-stamp
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT t:humidity (#PCDATA)>
+<!ATTLIST t:humidity
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT a:value (#PCDATA)>
+<!ATTLIST a:value
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:unit (#PCDATA)>
+<!ATTLIST a:unit
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT t:value (#PCDATA)>
+<!ATTLIST t:value
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>
+
+<!ELEMENT t:unit (#PCDATA)>
+<!ATTLIST t:unit
+    xmlns:t CDATA #FIXED 'http://www.example.org/thermostat'>

@@ -1,0 +1,66 @@
+package xmltools;
+
+import java.util.List;
+
+import org.jdom2.Attribute;
+import org.jdom2.Element;
+
+public class ConstraintsValidator {
+	
+	public static boolean constraintsValidationElements(List<Element> al,List<Element> bl){
+		boolean equals = true;
+		for(Element a : al){
+			boolean notFound = true;
+			for(Element b : bl){
+				if(equalsCheck(b,a)) notFound = false;
+			}
+			if (notFound) equals = false;
+			// this boolean is used to know if an attribute and an element are different
+		}
+		return equals;
+	}
+	
+	public static boolean constraintsValidationAttri(List<Element> al,List<Attribute> bl){
+		boolean equals = true;
+		for(Element a : al){
+			boolean notFound = true;
+			for(Attribute b : bl){
+				if(equalsCheck(b,a)) notFound = false;
+			}
+			if (notFound) equals = false;
+			// this boolean is used to know if an attribute and an element are different
+		}
+		return equals;
+	}
+	
+	
+	private static boolean equalsCheck(Object a, Object b) {
+		int caseObj = 0;
+		if(a instanceof Element) {
+			if(b instanceof Element) {
+				caseObj = 1; 
+			} else if(b instanceof Attribute) {
+				caseObj = 2;
+			}
+		} else if(a instanceof Attribute) {
+			if(b instanceof Element) {
+				caseObj = 3;
+			} else if(b instanceof Attribute) {
+				caseObj = 4; 
+			}
+		}
+		boolean equality=false;
+		switch(caseObj){
+		case 1: equality = ((Element) a).getText().toLowerCase().equals(((Element) b).getText().toLowerCase());
+				break;
+		case 2: equality = ((Attribute) b).getValue().toLowerCase().equals(((Element) a).getText().toLowerCase()); 
+				break;
+		case 3: equality = ((Element) b).getText().toLowerCase().equals(((Attribute) a).getValue().toLowerCase());
+				break;
+		case 4: equality = ((Attribute) a).getValue().toLowerCase().equals(((Attribute) b).getValue().toLowerCase());
+				break;
+		default: throw new RuntimeException();
+		}
+		return equality;
+	}
+}

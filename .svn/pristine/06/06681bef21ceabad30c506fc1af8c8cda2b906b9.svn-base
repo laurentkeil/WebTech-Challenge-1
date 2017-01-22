@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:bulbData xmlns:p="http://www.example.org/bulb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.example.org/bulb bulb.xsd ">
+  <p:dailyMeasurement>
+    <p:date>2001-01-01</p:date>
+    <p:measurement>
+      <p:color-mode>normal</p:color-mode>
+      <p:time-stamp>19:00:00</p:time-stamp>
+      <p:brightness>dark</p:brightness>
+    </p:measurement>
+  </p:dailyMeasurement>
+  <p:dailyMeasurement>
+    <p:date>2009-01-01</p:date>
+    <p:measurement>
+      <p:color-mode>normal</p:color-mode>
+      <p:time-stamp>19:00:00</p:time-stamp>
+      <p:brightness>dark</p:brightness>
+    </p:measurement>
+  </p:dailyMeasurement>
+  <p:dailyMeasurement>
+    <p:date>2011-01-01</p:date>
+    <p:measurement>
+      <p:color-mode>relaxation</p:color-mode>
+      <p:time-stamp>20:00:00</p:time-stamp>
+      <p:brightness>dim</p:brightness>
+    </p:measurement>
+  </p:dailyMeasurement>
+  <p:dailyMeasurement>
+    <p:date>2014-01-01</p:date>
+    <p:measurement>
+      <p:color-mode>no-light</p:color-mode>
+      <p:time-stamp>13:00:00</p:time-stamp>
+      <p:brightness>bright</p:brightness>
+    </p:measurement>
+  </p:dailyMeasurement>
+  <p:dailyMeasurement>
+    <p:date>2015-01-01</p:date>
+    <p:measurement>
+      <p:color-mode>romance</p:color-mode>
+      <p:time-stamp>22:00:00</p:time-stamp>
+      <p:brightness>dark</p:brightness>
+    </p:measurement>
+  </p:dailyMeasurement>
+  <p:model name = "Philips Smart Bulb"/>
+  <p:user-ID>Bob-Namur-1257</p:user-ID>
+</p:bulbData>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/bulb" xmlns="http://www.example.org/bulb"
+	elementFormDefault="qualified">
+
+	<xs:element name="bulbData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dailyMesurement" type="mesurementType"
+					minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="model">
+					<xs:complexType>
+						<xs:attribute name="name" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="user-ID" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="mesurementType">
+		<xs:sequence>
+			<xs:element name="date" type="xs:date" />
+			<xs:element name="measurement" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="color-mode">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="normal" />
+									<xs:enumeration value="romance" />
+									<xs:enumeration value="relaxation" />
+									<xs:enumeration value="no-light" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="time-stump" type="xs:time" />
+						<xs:element name="brightness">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="dark" />
+									<xs:enumeration value="dim" />
+									<xs:enumeration value="bright" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

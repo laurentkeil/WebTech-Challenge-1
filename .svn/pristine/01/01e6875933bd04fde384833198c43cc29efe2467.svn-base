@@ -1,0 +1,58 @@
+package view;
+
+import java.awt.Color;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
+import org.xml.sax.SAXException;
+
+import main.FunctionalityFour;
+
+public class FunctionalityFourView extends JPanel implements ActionListener {
+	protected JButton button;
+	protected JTextArea textArea;
+	protected JScrollPane jScroll;
+	public FunctionalityFourView() {
+		setLayout(null);
+		
+		button = new  JButton( "Produce XHTML" );
+		button.setBounds(420, 40, 170, 30);
+		button.addActionListener(this);
+		
+		textArea = new JTextArea();
+		textArea.setBackground(Color.white);
+		textArea.setOpaque(true);			
+	    textArea.setEditable(false);
+	    textArea.setLineWrap(true);
+	    
+	    
+	    jScroll = new JScrollPane(textArea);
+	    jScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		jScroll.setBackground(Color.white);
+		jScroll.setBounds(10, 100, 580 , 290);
+		jScroll.setOpaque(true);
+		
+		
+		add(jScroll);
+		add(button);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		if( source == button ) {
+				String[] args=null;
+				textArea.setText(FunctionalityFour.main(args));
+				JOptionPane.showMessageDialog(this, "HTML is produced", "Fourth functionality", JOptionPane.INFORMATION_MESSAGE);
+		}
+	}
+}

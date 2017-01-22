@@ -1,0 +1,108 @@
+package main;
+
+import java.util.List;
+
+import org.jdom2.Attribute;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.filter.Filters;
+
+import xmltools.ConstraintsValidator;
+import xmltools.QueryingTools;
+import xmltools.XMLReader;
+
+public class FunctionalityOne {
+	private static boolean globalValidation = true;
+	private static String res = "=========================================";
+	
+	public static void main(String[] args) {
+		
+		
+		int test = 0;
+		// Read documents with DTD validation
+		
+		res = res + "\n========= XML Documents validation ==========";
+
+		Document airConditioner = XMLReader.readXSDValidation("air-conditioner.xsd","air-conditioner.xml");
+		Document bulb = XMLReader.readXSDValidation("bulb.xsd","bulb.xml");
+		Document lightSensor = XMLReader
+				.readXSDValidation("light-sensor.xsd","light-sensor.xml");
+		Document thermostat = XMLReader
+				.readXSDValidation("thermostat.xsd","thermostat.xml");
+		Document user = XMLReader
+				.readXSDValidation("user.xsd","user.xml");
+
+		if (airConditioner == null) {
+			globalValidation = false;
+			test = 1;
+		}
+		if (bulb == null) {
+			globalValidation = false;
+			test = 2;
+		}
+		if (lightSensor == null) {
+			globalValidation = false;
+			test = 3;
+		}
+		if (thermostat == null) {
+			globalValidation = false;
+			test = 3;
+		}
+		if (user == null) {
+			globalValidation = false;
+			test = 3;
+		}
+
+		if (globalValidation == true) {
+			res = res + "\n========XML Documents are valid=========";
+		} else {
+			res = res + "\n========Validation fails at test " + test
+					+ "=========";
+		}
+		res = res + "\n========================================";
+		
+		// Constraints validation
+
+		/*if (globalValidation)
+			globalValidation = contraintValidationx(x, y);
+		if (globalValidation)
+			globalValidation = contraintValidationy(y, z);
+		if (globalValidation)
+			globalValidation = contraintValidationz(x,
+					z);*/
+		
+		res = res + "\nResult of contraints validation : "
+				+ globalValidation;
+		
+		// Constraints validation
+
+	}
+	// Constraints methods
+	
+
+	private static boolean validationBwDoc1andDoc2(Document doc1, String query1, Document doc2, String query2, String type) {
+		boolean valid = false;
+		if (type.equals("EE")) {
+			List<Element> list1 = QueryingTools.XPathEvaluation(query1, doc1,
+					Filters.element());
+			List<Element> list2 = QueryingTools.XPathEvaluation(query2, doc2,
+					Filters.element());
+			valid = ConstraintsValidator.constraintsValidationElements(list1, list2);
+		} else {
+			List<Element> list1 = QueryingTools.XPathEvaluation(query1, doc1,
+					Filters.element());
+			List<Attribute> list2 = QueryingTools.XPathEvaluation(query2, doc2,
+					Filters.attribute());
+			valid = ConstraintsValidator.constraintsValidationAttri(list1, list2);
+		}
+		return valid;
+	}
+	
+	public static boolean getValidation() {
+		return globalValidation;
+	}
+	
+	public static String getAnswer() {
+		return res;
+	}
+}

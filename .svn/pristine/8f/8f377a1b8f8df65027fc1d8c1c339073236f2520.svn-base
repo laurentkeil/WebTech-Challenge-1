@@ -1,0 +1,19 @@
+package main;
+
+import java.util.Scanner;
+
+import xmltools.Stylizer;
+
+public class FunctionalityThree {
+	
+	public static String getQuery(int query) {
+		switch (query) {
+		case 1:break;
+		case 2:break;
+		case 3:
+				
+			break;
+		}
+		return null;
+	}
+}

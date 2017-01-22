@@ -1,0 +1,65 @@
+package view;
+
+import java.awt.Color;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
+import org.xml.sax.SAXException;
+
+import main.FunctionalityTwo;
+
+public class FunctionalityTwoView extends JPanel implements ActionListener {
+
+protected JButton button;
+protected JTextArea textArea;
+protected JScrollPane jScroll;
+	
+	public FunctionalityTwoView() {
+		setLayout(null);
+
+		button = new  JButton( "Documents integration" );
+		button.setBounds(420, 40, 170, 30);
+		button.addActionListener(this);
+		
+		textArea = new JTextArea();
+		textArea.setBackground(Color.white);
+		textArea.setOpaque(true);			
+	    textArea.setEditable(false);
+	    textArea.setLineWrap(true);
+	    
+	    
+	    jScroll = new JScrollPane(textArea);
+	    jScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		jScroll.setBackground(Color.white);
+		jScroll.setBounds(10, 100, 580 , 290);
+		jScroll.setOpaque(true);
+		
+		
+		add(jScroll);
+		
+		add(button);
+	}
+
+	public void actionPerformed(ActionEvent action) {
+		Object func = action.getSource();
+		if( func == button ) {
+			
+				String[] args = null;
+				textArea.setText(FunctionalityTwo.main(args));
+				/*if ( valid )
+					JOptionPane.showMessageDialog(this, "Integration is completed and valid", "Second functionality", JOptionPane.INFORMATION_MESSAGE);
+				else 
+					JOptionPane.showMessageDialog(this, "Integration is not valid", "Second functionality", JOptionPane.INFORMATION_MESSAGE);*/
+		}
+	}
+}

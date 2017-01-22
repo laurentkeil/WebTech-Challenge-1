@@ -1,0 +1,56 @@
+package view;
+
+import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBox;
+import javax.swing.JPanel;
+
+
+public class Functions extends JPanel implements ActionListener {
+	protected Button function1, function2, function3, function4;
+	
+	public Functions() {
+		ButtonGroup group = new ButtonGroup();
+		function1 = new Button("First functionality");
+		//group.add(function1);
+		
+		function2 = new Button("Second functionality");
+		//group.add(function2);
+		
+		function3 = new Button("Third functionality");
+		//group.add(function3);
+		
+		function4 = new Button("Fourth functionality");
+		//group.add(function4);
+		
+		function1.addActionListener(this);
+		function2.addActionListener(this);
+		function3.addActionListener(this);
+		function4.addActionListener(this);
+	
+		add(function1);
+		add(function2);
+		add(function3);
+		add(function4);
+	}
+
+	public void actionPerformed(ActionEvent action) {
+		Object func = action.getSource();
+		Menu mp = (Menu)this.getParent();
+
+		if (func == function1) {
+    	//	mp.setFunctionalityPane( new FunctionalityOneView() );
+        } else if (func == function2) {
+    	//	mp.setFunctionalityPane( new FunctionalityTwoView() );
+        } else if (func == function3) {
+    	//	mp.setFunctionalityPane( new FunctionalityThreeView() );
+        } else if (func == function4) {
+    	//	mp.setFunctionalityPane( new FunctionalityFourView() );
+        }
+		
+	}
+
+}

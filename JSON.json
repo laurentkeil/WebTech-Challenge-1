@@ -1,0 +1,384 @@
+{
+        
+        "i:actuator" : {
+                "xsi:schemaLocation" : "http://www.example.org/actuator actuator.xsd",
+    
+        "u:users" : { "u:user" :[{
+                
+        "u:ID" : "Bob-Namur-1257",
+        "u:firstName" : "Bob",
+        "u:LastName" : "Charless"
+    },{
+                
+        "u:ID" : "Namur-Barbi-1234",
+        "u:firstName" : "Barbi",
+        "u:LastName" : "Charless"
+    },{
+                
+        "u:ID" : "Henry-1241",
+        "u:firstName" : "Henry",
+        "u:LastName" : "Charless"
+    }] },
+        "a:air-measurements" : { "a:dailyMeasurement" :[{
+                
+        "a:date" : "2001-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "10.20",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "12:00:00",
+        "a:action" : "heater"
+    }
+    },{
+                
+        "a:date" : "2001-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "17.25",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "12:30:00",
+        "a:action" : "normal"
+    }
+    },{
+                
+        "a:date" : "2004-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "40.50",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "12:00:00",
+        "a:action" : "cooler"
+    }
+    },{
+                
+        "a:date" : "2007-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "30.10",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "12:00:00",
+        "a:action" : "cooler"
+    }
+    },{
+                
+        "a:date" : "2007-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "20.40",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "18:10:00",
+        "a:action" : "normal"
+    }
+    },{
+                
+        "a:date" : "2011-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "33.12",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "03:00:00",
+        "a:action" : "cooler"
+    }
+    },{
+                
+        "a:date" : "2011-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "15.30",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "12:00:00",
+        "a:action" : "normal"
+    }
+    },{
+                
+        "a:date" : "2014-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "40.50",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "12:00:00",
+        "a:action" : "cooler"
+    }
+    },{
+                
+        "a:date" : "2014-01-01",
+        "a:measurement" : {
+                
+        "a:temperature" : {
+                
+        "a:value" : "0.50",
+        "a:unit" : "Centigrade"
+    },
+        "a:time-stamp" : "15:00:00",
+        "a:action" : "heater"
+    }
+    },"LG window air conditioners","Namur-Barbi-1237"] },
+        "b:bulb-measurements" : { "b:dailyMeasurement" :[{
+                
+        "b:date" : "2001-01-01",
+        "b:measurement" : {
+                
+        "b:color-mode" : "normal",
+        "b:time-stamp" : "19:00:00",
+        "b:brightness" : "dark"
+    }
+    },{
+                
+        "b:date" : "2009-01-01",
+        "b:measurement" : {
+                
+        "b:color-mode" : "normal",
+        "b:time-stamp" : "19:00:00",
+        "b:brightness" : "dark"
+    }
+    },{
+                
+        "b:date" : "2011-01-01",
+        "b:measurement" : {
+                
+        "b:color-mode" : "relaxation",
+        "b:time-stamp" : "20:00:00",
+        "b:brightness" : "dim"
+    }
+    },{
+                
+        "b:date" : "2014-01-01",
+        "b:measurement" : {
+                
+        "b:color-mode" : "no-light",
+        "b:time-stamp" : "13:00:00",
+        "b:brightness" : "bright"
+    }
+    },{
+                
+        "b:date" : "2015-01-01",
+        "b:measurement" : {
+                
+        "b:color-mode" : "romance",
+        "b:time-stamp" : "22:00:00",
+        "b:brightness" : "dark"
+    }
+    },"Philips Smart Bulb","Bob-Namur-1257"] },
+        "l:light-measurements" : { "l:dailyMeasurement" :[{
+                
+        "l:date" : {
+                
+        "l:year" : "2001",
+        "l:month" : "01",
+        "l:day" : "01"
+    },
+        "l:measurement" : {
+                
+        "l:time-stamp" : "19:00:00",
+        "l:brightness" : "dark"
+    }
+    },{
+                
+        "l:date" : {
+                
+        "l:year" : "2009",
+        "l:month" : "01",
+        "l:day" : "01"
+    },
+        "l:measurement" : {
+                
+        "l:time-stamp" : "19:00:00",
+        "l:brightness" : "dark"
+    }
+    },{
+                
+        "l:date" : {
+                
+        "l:year" : "2011",
+        "l:month" : "01",
+        "l:day" : "01"
+    },
+        "l:measurement" : {
+                
+        "l:time-stamp" : "20:00:00",
+        "l:brightness" : "dim"
+    }
+    },{
+                
+        "l:date" : {
+                
+        "l:year" : "2014",
+        "l:month" : "01",
+        "l:day" : "01"
+    },
+        "l:measurement" : {
+                
+        "l:time-stamp" : "13:00:00",
+        "l:brightness" : "bright"
+    }
+    },{
+                
+        "l:date" : {
+                
+        "l:year" : "2015",
+        "l:month" : "01",
+        "l:day" : "01"
+    },
+        "l:measurement" : {
+                
+        "l:time-stamp" : "22:00:00",
+        "l:brightness" : "dark"
+    }
+    },"Siemens Light Sensor","Bob-Namur-1257"] },
+        "t:thermostat-measurements" : { "t:dailyMeasurement" :[{
+                
+        "t:date" : "2001-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "10.20",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "12:00:00",
+        "t:humidity" : "63"
+    }
+    },{
+                
+        "t:date" : "2001-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "17.25",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "12:30:00",
+        "t:humidity" : "73"
+    }
+    },{
+                
+        "t:date" : "2004-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "40.50",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "12:00:00",
+        "t:humidity" : "53"
+    }
+    },{
+                
+        "t:date" : "2007-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "30.10",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "12:00:00",
+        "t:humidity" : "63"
+    }
+    },{
+                
+        "t:date" : "2007-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "20.4",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "18:10:00",
+        "t:humidity" : "73"
+    }
+    },{
+                
+        "t:date" : "2011-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "33.12",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "03:00:00",
+        "t:humidity" : "53"
+    }
+    },{
+                
+        "t:date" : "2011-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "15.3",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "12:00:00",
+        "t:humidity" : "43"
+    }
+    },{
+                
+        "t:date" : "2014-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "40.50",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "12:00:00",
+        "t:humidity" : "83"
+    }
+    },{
+                
+        "t:date" : "2014-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "0.50",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "15:00:00",
+        "t:humidity" : "83"
+    }
+    },{
+                
+        "t:date" : "2015-01-01",
+        "t:measurement" : {
+                
+        "t:temperature" : {
+                
+        "t:value" : "0.50",
+        "t:unit" : "Centigrade"
+    },
+        "t:time-stamp" : "15:00:00",
+        "t:humidity" : "83"
+    }
+    },"Honeywell TH","Namur-Barbi-1234"] }
+    }}
+    

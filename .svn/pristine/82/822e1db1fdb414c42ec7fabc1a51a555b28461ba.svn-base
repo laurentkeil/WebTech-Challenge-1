@@ -1,0 +1,47 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT a:air-conditioner-data (a:dailyMeasurement+,a:model,a:user-ID)>
+<!ATTLIST a:air-conditioner-data
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'
+    xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation CDATA #REQUIRED>
+
+<!ELEMENT a:dailyMeasurement (a:date,a:measurement)>
+<!ATTLIST a:dailyMeasurement
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:model (#PCDATA)>
+<!ATTLIST a:model
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:user-ID (#PCDATA)>
+<!ATTLIST a:user-ID
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:date (#PCDATA)>
+<!ATTLIST a:date
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:measurement (a:temperature,a:time-stamp,a:action)>
+<!ATTLIST a:measurement
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:temperature (a:value,a:unit)>
+<!ATTLIST a:temperature
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:time-stamp (#PCDATA)>
+<!ATTLIST a:time-stamp
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:action (#PCDATA)>
+<!ATTLIST a:action
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:value (#PCDATA)>
+<!ATTLIST a:value
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>
+
+<!ELEMENT a:unit (#PCDATA)>
+<!ATTLIST a:unit
+    xmlns:a CDATA #FIXED 'http://www.example.org/air-conditioner'>

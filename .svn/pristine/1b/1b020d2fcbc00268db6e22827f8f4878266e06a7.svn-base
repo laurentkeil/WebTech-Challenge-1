@@ -1,0 +1,54 @@
+package main;
+
+import java.util.Scanner;
+
+import net.sf.saxon.s9api.XdmItem;
+import net.sf.saxon.s9api.XdmValue;
+import xmltools.QueryingTools;
+import xmltools.Stylizer;
+
+public class FunctionalityThree {
+	
+	private static String res = "";
+	
+	public static String getQuery(int choice) {
+		String query = "";
+		boolean xQuery = true;
+		switch (choice) {
+		case 1:
+			query = "q1.xq";
+			break;
+		case 2:
+			query = "q2.xq";
+			break;
+		case 3:
+			Stylizer.XSLTTransform("q3.xsl", "integration.xml", "System.out");
+			break;
+		case 4:
+			query = "q3.xq";
+			break;
+		case 5:
+			query = "q4.xq";
+			break;
+		case 6:
+			query = "q5.xq";
+			break;
+			
+		}
+		
+		if (xQuery) {
+			XdmValue result = QueryingTools.XQueryEvaluation(query);
+			for (XdmItem item : result) {
+				res = res+item.toString()+"\n";
+				System.out.println(res);
+			}
+		}
+
+		return res;
+	}
+	
+	public static String resetRes(){
+		res = "";
+		return res;
+	}
+}

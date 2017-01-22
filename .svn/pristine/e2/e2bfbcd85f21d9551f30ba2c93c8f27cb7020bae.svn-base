@@ -1,0 +1,40 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT b:bulbData (b:dailyMeasurement+,b:model,b:user-ID)>
+<!ATTLIST b:bulbData
+    xmlns:b CDATA #FIXED 'http://www.example.org/bulb'
+    xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation CDATA #REQUIRED>
+
+<!ELEMENT b:dailyMeasurement (b:date,b:measurement)>
+<!ATTLIST b:dailyMeasurement
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>
+
+<!ELEMENT b:model EMPTY>
+<!ATTLIST b:model
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'
+    name CDATA #REQUIRED>
+
+<!ELEMENT b:user-ID (#PCDATA)>
+<!ATTLIST b:user-ID
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>
+
+<!ELEMENT b:date (#PCDATA)>
+<!ATTLIST b:date
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>
+
+<!ELEMENT b:measurement (b:color-mode,b:time-stamp,b:brightness)>
+<!ATTLIST b:measurement
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>
+
+<!ELEMENT b:color-mode (#PCDATA)>
+<!ATTLIST b:color-mode
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>
+
+<!ELEMENT b:time-stamp (#PCDATA)>
+<!ATTLIST b:time-stamp
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>
+
+<!ELEMENT b:brightness (#PCDATA)>
+<!ATTLIST b:brightness
+    xmlns:b CDATA #FIXED 'httb://www.example.org/bulb'>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i:actuator xmlns:i="http://www.example.org/actuator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:schemaLocation="http://www.example.org/actuator actuator.xsd">
+   <u:users xmlns:u="http://www.example.org/user">
+<<<<<<< .mine
+<<<<<<< .mine
+      <u:user xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+=======
+      <u:user>
+=======
+      <u:user xmlns:xsi="httu://www.w3.org/2001/XMLSchema-instance">
+>>>>>>> .r23
+>>>>>>> .r27
+         <u:ID>Bob-Namur-1257</u:ID>
+         <u:firstName>Bob</u:firstName>
+         <u:LastName>Charless</u:LastName>
+      </u:user>
+<<<<<<< .mine
+<<<<<<< .mine
+      <u:user xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+=======
+      <u:user>
+=======
+      <u:user xmlns:xsi="httu://www.w3.org/2001/XMLSchema-instance">
+>>>>>>> .r23
+>>>>>>> .r27
+         <u:ID>Namur-Barbi-1234</u:ID>
+         <u:firstName>Barbi</u:firstName>
+         <u:LastName>Charless</u:LastName>
+      </u:user>
+<<<<<<< .mine
+<<<<<<< .mine
+      <u:user xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+=======
+      <u:user>
+=======
+      <u:user xmlns:xsi="httu://www.w3.org/2001/XMLSchema-instance">
+>>>>>>> .r23
+>>>>>>> .r27
+         <u:ID>Henry-1241</u:ID>
+         <u:firstName>Henry</u:firstName>
+         <u:LastName>Charless</u:LastName>
+      </u:user>
+   </u:users>
+   <a:air-measurements xmlns:a="http://www.example.org/air-conditioner">
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2001-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>10.20</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>12:00:00</a:time-stamp>
+            <a:action>heater</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2001-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>17.25</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>12:30:00</a:time-stamp>
+            <a:action>normal</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2004-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>40.50</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>12:00:00</a:time-stamp>
+            <a:action>cooler</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2007-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>30.10</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>12:00:00</a:time-stamp>
+            <a:action>cooler</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2007-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>20.40</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>18:10:00</a:time-stamp>
+            <a:action>normal</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2011-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>33.12</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>03:00:00</a:time-stamp>
+            <a:action>cooler</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2011-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>15.30</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>12:00:00</a:time-stamp>
+            <a:action>normal</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2014-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>40.50</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>12:00:00</a:time-stamp>
+            <a:action>cooler</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <a:date>2014-01-01</a:date>
+         <a:measurement>
+            <a:temperature>
+               <a:value>0.50</a:value>
+               <a:unit>Centigrade</a:unit>
+            </a:temperature>
+            <a:time-stamp>15:00:00</a:time-stamp>
+            <a:action>heater</a:action>
+         </a:measurement>
+      </a:dailyMeasurement>
+      <a:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">LG window air conditioners</a:model>
+      <a:user-ID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Namur-Barbi-1234</a:user-ID>
+   </a:air-measurements>
+   <b:bulb-measurements xmlns:b="http://www.example.org/bulb">
+      <b:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <b:date>2001-01-01</b:date>
+         <b:measurement>
+            <b:color-mode>normal</b:color-mode>
+            <b:time-stamp>19:00:00</b:time-stamp>
+            <b:brightness>dark</b:brightness>
+         </b:measurement>
+      </b:dailyMeasurement>
+      <b:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <b:date>2009-01-01</b:date>
+         <b:measurement>
+            <b:color-mode>normal</b:color-mode>
+            <b:time-stamp>19:00:00</b:time-stamp>
+            <b:brightness>dark</b:brightness>
+         </b:measurement>
+      </b:dailyMeasurement>
+      <b:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <b:date>2011-01-01</b:date>
+         <b:measurement>
+            <b:color-mode>relaxation</b:color-mode>
+            <b:time-stamp>20:00:00</b:time-stamp>
+            <b:brightness>dim</b:brightness>
+         </b:measurement>
+      </b:dailyMeasurement>
+      <b:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <b:date>2014-01-01</b:date>
+         <b:measurement>
+            <b:color-mode>no-light</b:color-mode>
+            <b:time-stamp>13:00:00</b:time-stamp>
+            <b:brightness>bright</b:brightness>
+         </b:measurement>
+      </b:dailyMeasurement>
+      <b:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <b:date>2015-01-01</b:date>
+         <b:measurement>
+            <b:color-mode>romance</b:color-mode>
+            <b:time-stamp>22:00:00</b:time-stamp>
+            <b:brightness>dark</b:brightness>
+         </b:measurement>
+      </b:dailyMeasurement>
+      <b:model>Philips Smart Bulb</b:model>
+      <b:user-ID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Bob-Namur-1257</b:user-ID>
+   </b:bulb-measurements>
+   <l:light-measurements xmlns:l="http://www.example.org/light-sensor">
+      <l:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		       <l:date>
+			         <l:year>2001</l:year>
+			         <l:month>01</l:month>
+			         <l:day>01</l:day>
+		       </l:date>
+		       <l:measurement>
+			         <l:time-stamp>19:00:00</l:time-stamp>
+			         <l:brightness>dark</l:brightness>
+		       </l:measurement>
+	     </l:dailyMeasurement>
+      <l:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		       <l:date>
+			         <l:year>2009</l:year>
+			         <l:month>01</l:month>
+			         <l:day>01</l:day>
+		       </l:date>
+		       <l:measurement>
+			         <l:time-stamp>19:00:00</l:time-stamp>
+			         <l:brightness>dark</l:brightness>
+		       </l:measurement>
+	     </l:dailyMeasurement>
+      <l:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		       <l:date>
+			         <l:year>2011</l:year>
+			         <l:month>01</l:month>
+			         <l:day>01</l:day>
+		       </l:date>
+		       <l:measurement>
+			         <l:time-stamp>20:00:00</l:time-stamp>
+			         <l:brightness>dim</l:brightness>
+		       </l:measurement>
+	     </l:dailyMeasurement>
+      <l:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		       <l:date>
+			         <l:year>2014</l:year>
+			         <l:month>01</l:month>
+			         <l:day>01</l:day>
+		       </l:date>
+		       <l:measurement>
+			         <l:time-stamp>13:00:00</l:time-stamp>
+			         <l:brightness>bright</l:brightness>
+		       </l:measurement>
+	     </l:dailyMeasurement>
+      <l:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		       <l:date>
+			         <l:year>2015</l:year>
+			         <l:month>01</l:month>
+			         <l:day>01</l:day>
+		       </l:date>
+		       <l:measurement>
+			         <l:time-stamp>22:00:00</l:time-stamp>
+			         <l:brightness>dark</l:brightness>
+		       </l:measurement>
+	     </l:dailyMeasurement>
+      <l:model>Siemens Light Sensor</l:model>
+      <l:user-ID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Bob-Namur-1257</l:user-ID>
+   </l:light-measurements>
+   <t:thermostat-measurements xmlns:t="http://www.example.org/thermostat">
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2001-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>10.20</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>12:00:00</t:time-stamp>
+            <t:humidity>63</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2001-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>17.25</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>12:30:00</t:time-stamp>
+            <t:humidity>73</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2004-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>40.50</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>12:00:00</t:time-stamp>
+            <t:humidity>53</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2007-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>30.10</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>12:00:00</t:time-stamp>
+            <t:humidity>63</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2007-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>20.4</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>18:10:00</t:time-stamp>
+            <t:humidity>73</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2011-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>33.12</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>03:00:00</t:time-stamp>
+            <t:humidity>53</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2011-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>15.3</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>12:00:00</t:time-stamp>
+            <t:humidity>43</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2014-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>40.50</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>12:00:00</t:time-stamp>
+            <t:humidity>83</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2014-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>0.50</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>15:00:00</t:time-stamp>
+            <t:humidity>83</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:dailyMeasurement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <t:date>2015-01-01</t:date>
+         <t:measurement>
+            <t:temperature>
+               <t:value>0.50</t:value>
+               <t:unit>Centigrade</t:unit>
+            </t:temperature>
+            <t:time-stamp>15:00:00</t:time-stamp>
+            <t:humidity>83</t:humidity>
+         </t:measurement>
+      </t:dailyMeasurement>
+      <t:model>Honeywell TH</t:model>
+      <t:user-ID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Namur-Barbi-1234</t:user-ID>
+   </t:thermostat-measurements>
+</i:actuator>

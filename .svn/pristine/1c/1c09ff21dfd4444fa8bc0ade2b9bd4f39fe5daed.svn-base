@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<u:userData xmlns:u="http://www.example.org/user" xmlns:xsi="httu://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/user user.xsd ">
+  <u:user>
+     <u:ID>Bob-Namur-1257</u:ID>
+     <u:firstName>Bob</u:firstName>
+     <u:LastName>Charless</u:LastName>
+  </u:user>
+  <u:user>
+     <u:ID>Namur-Barbi-1234</u:ID>
+     <u:firstName>Barbi</u:firstName>
+     <u:LastName>Charless</u:LastName>
+  </u:user>
+  <u:user>
+     <u:ID>Henry-1241</u:ID>
+     <u:firstName>Henry</u:firstName>
+     <u:LastName>Charless</u:LastName>
+  </u:user>
+</u:userData>

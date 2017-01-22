@@ -1,0 +1,37 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+
+
+public class Menu extends JPanel {
+	protected JPanel options, functionality;
+
+	public Menu() {
+		super( new BorderLayout() );
+		options = new Functions();
+	    options.setPreferredSize( new Dimension(200, 400) );
+	    options.setBorder(BorderFactory.createLineBorder(Color.black));
+	    
+		functionality = new FunctionalityOneView();
+		functionality.setPreferredSize( new Dimension(600, 400) );
+		functionality.setBorder(BorderFactory.createLineBorder(Color.black));
+		
+		add(options, BorderLayout.WEST);
+		add(functionality, BorderLayout.EAST);
+	}
+	
+	public void setFunctionalityPane( JPanel newFunctionality ) {
+		remove(functionality);
+		functionality = newFunctionality;
+		functionality.setPreferredSize( new Dimension(600, 400) );
+		functionality.setBorder(BorderFactory.createLineBorder(Color.black));
+
+		add(functionality, BorderLayout.EAST);
+		this.revalidate();
+	}
+}

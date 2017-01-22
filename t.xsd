@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.org/thermostat" xmlns:t="http://www.example.org/thermostat">
+    <xs:element name="thermostat-measurements">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="t:dailyMeasurement"/>
+                <xs:element ref="t:model"/>
+                <xs:element ref="t:user-ID"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dailyMeasurement">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="t:date"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="t:measurement"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="date" type="xs:date"/>
+    <xs:element name="measurement">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="t:temperature"/>
+                <xs:element ref="t:time-stamp"/>
+                <xs:element ref="t:humidity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="temperature">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="t:value"/>
+                <xs:element ref="t:unit"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="value" type="xs:double"/>
+    <xs:element name="unit" type="xs:string"/>
+    <xs:element name="time-stamp" type="xs:time"/>
+    <xs:element name="humidity" type="xs:integer"/>
+    <xs:element name="model" type="xs:string"/>
+    <xs:element name="user-ID" type="xs:string"/>
+</xs:schema>

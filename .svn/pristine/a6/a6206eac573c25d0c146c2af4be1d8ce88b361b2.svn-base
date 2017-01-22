@@ -1,0 +1,16 @@
+package main;
+
+import xmltools.Stylizer;
+import xmltools.XMLReader;
+
+public class FunctionalityFour {
+	public static String main(String[] args) {
+		//Transform document
+		//Write document transformed --> xhtml.html
+		
+		//Read xhtml to see if it works (without validation) and convertDocumentToString
+		
+		return null;
+		
+	}
+}

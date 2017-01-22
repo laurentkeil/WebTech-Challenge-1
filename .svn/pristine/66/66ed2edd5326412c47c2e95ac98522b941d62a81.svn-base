@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://www.example.org/light-sensor"
+	xmlns:l="http://www.example.org/light-sensor">
+	<xs:element name="light-measurements">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="l:dailyMeasurement" />
+				<xs:element ref="l:model" />
+				<xs:element ref="l:user-ID" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="dailyMeasurement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="l:date" />
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="l:measurement" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="date">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="l:year" />
+				<xs:element ref="l:month" />
+				<xs:element ref="l:day" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="year" type="xs:integer" />
+	<xs:element name="month" type="xs:integer" />
+	<xs:element name="day" type="xs:integer" />
+	<xs:element name="measurement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="l:time-stamp" />
+				<xs:element ref="l:brightness" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="time-stamp" type="xs:time" />
+	<xs:element name="brightness">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="dark" />
+				<xs:enumeration value="dim" />
+				<xs:enumeration value="bright" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="model" type="xs:string" />
+	<xs:element name="user-ID" type="xs:string" />
+</xs:schema>

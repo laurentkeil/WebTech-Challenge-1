@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.org/actuator" xmlns:b="http://www.example.org/bulb" xmlns:a="http://www.example.org/air-conditioner" xmlns:l="http://www.example.org/light-sensor" xmlns:t="http://www.example.org/thermostat" xmlns:i="http://www.example.org/actuator" xmlns:u="http://www.example.org/user">
+    <xs:import namespace="http://www.example.org/air-conditioner" schemaLocation="a.xsd"/>
+    <xs:import namespace="http://www.example.org/bulb" schemaLocation="b.xsd"/>
+    <xs:import namespace="http://www.example.org/light-sensor" schemaLocation="l.xsd"/>
+    <xs:import namespace="http://www.example.org/thermostat" schemaLocation="t.xsd"/>
+    <xs:import namespace="http://www.example.org/user" schemaLocation="u.xsd"/>
+    <xs:element name="actuator">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="u:users"/>
+                <xs:element ref="a:air-measurements"/>
+                <xs:element ref="b:bulb-measurements"/>
+                <xs:element ref="l:light-measurements"/>
+                <xs:element ref="t:thermostat-measurements"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

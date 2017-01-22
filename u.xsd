@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.org/user" xmlns:u="http://www.example.org/user">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="u:user"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="user">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="u:ID"/>
+                <xs:element ref="u:firstName"/>
+                <xs:element ref="u:LastName"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ID" type="xs:string"/>
+    <xs:element name="firstName" type="xs:string"/>
+    <xs:element name="LastName" type="xs:string"/>
+</xs:schema>

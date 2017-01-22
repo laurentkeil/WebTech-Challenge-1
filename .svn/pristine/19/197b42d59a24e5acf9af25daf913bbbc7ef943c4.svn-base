@@ -1,0 +1,25 @@
+package main;
+
+import java.io.IOException;
+import java.io.StringReader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
+
+import xmltools.Stylizer;
+import xmltools.XMLReader;
+
+public class FunctionalityFour {
+	
+
+	
+	public static String main(String[] args) {
+		//Transform document
+		//Write document transformed --> xhtml.html
+		Stylizer.XSLTTransform("JSON.xsl", "actuator.xml", "JSON.txt");
+		
+		return XMLReader.convertDocumentToString("JSON.txt");
+		//Read xhtml to see if it works (without validation) and convertDocumentToString
+
+	}
+}
